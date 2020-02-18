@@ -31,7 +31,7 @@ namespace TestInigmaEmployment
         public void JobDescriptionPropertyOK()
         {
             clsJob aJob = new clsJob();
-            string SomeJob = "nice";
+            string SomeJob = "Technical work";
             aJob.JobDescription = SomeJob;
             Assert.AreEqual(aJob.JobDescription, SomeJob);
         }
@@ -61,6 +61,30 @@ namespace TestInigmaEmployment
             ajob.FK_StaffNo = FK_StaffNo;
             Assert.AreEqual(ajob.FK_StaffNo, FK_StaffNo);
         }
+        [TestMethod]
+        public void DateJobPostedPropertyOk()
+        {
+            clsJob ajob = new clsJob();
+            DateTime dt = new DateTime();
+            ajob.DateJobPosted = dt;
+            Assert.AreEqual(ajob.DateJobPosted, dt);
+        }
+        [TestMethod]
+        public void JobDataValidationOk()
+        {
+            clsJob ajob = new clsJob();
+            string Error = "";
+            string SomeJob = "Mechanic";
+            Error = ajob.Valid(SomeJob);
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void FindJobOk()
+        {
+            clsJob ajob = new clsJob();
+
+        }
+
       
 
     }
