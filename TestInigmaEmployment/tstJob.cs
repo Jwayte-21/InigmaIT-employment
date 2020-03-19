@@ -1,12 +1,15 @@
 ﻿using System;
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace TestInigmaEmployment
 {
     [TestClass]
     public class tstJob
     {
+        public object AllJobs { get; private set; }
+
         [TestMethod]
         public void InstanceOfclsJob()
         {
@@ -82,10 +85,61 @@ namespace TestInigmaEmployment
         public void FindJobOk()
         {
             clsJob ajob = new clsJob();
-
+            //boolean variable to store the result of validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 PK_JobNo = 1;
+            //invoke the method
+            Found = ajob.Find(PK_JobNo);
+            //test
+            Assert.IsTrue(Found);
         }
-
+        [TestMethod]
+        public void InstanceOfclsJobCollection()
+        {
+            clsJobCollection allJobs = new clsJobCollection();
+            Assert.IsNotNull(allJobs);
+        }
+        
+        
+        [TestMethod]
+        public void ListOk()
+        {
+            clsJobCollection allJobs = new clsJobCollection();
+            List<clsJob> TestList = new List<clsJob>();
+            clsJob TestItem = new clsJob();
+            TestItem.PK_JobNo = 1;
+            TestItem.JobName = "Mechanic";
+            TestItem.JobDescription = "Fix Cars";
+            TestItem.DateJobPosted = DateTime.Now.Date;
+            TestItem.FK_EmployerNo = 1;
+            TestItem.FK_StaffNo = 1;
+            TestList.Add(TestItem);
+            allJobs.MJobs = TestList;
+            Assert.AreEqual(allJobs.Count, TestList.Count);
+        }
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            clsJobCollection AllJobs = new clsJobCollection();
+            clsJob TestItem = new clsJob();
+            Int32 PrimaryKey = 0;
+            TestItem.PK_JobNo = 1;
+            TestItem.JobName = "Chef";
+            TestItem.JobDescription = "pub cook";
+            TestItem.DateJobPosted = DateTime.Now.Date;
+            TestItem.FK_EmployerNo = 1;
+            TestItem.FK_StaffNo = 1;
+            AllJobs.ThisJob = TestItem;
+            PrimaryKey = AllJobs.Add();
+            AllJobs.ThisJob = PrimaryKey;
+            AllJobs.ThisJob.Find(PrimaryKey);
+            Assert.AreEqual(AllJobs.ThisJob, TestItem);
+        }
+       
       
 
     }
+
+    
 }

@@ -26,5 +26,16 @@ namespace ClassLibrary
                 return "the Job name may not be blank!";
             }
         }
+
+        public bool Find(int pK_JobNo)
+        {
+            //always return true
+            return true;
+        }
+
+        public static implicit operator clsJob(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

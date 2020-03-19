@@ -13,5 +13,10 @@ namespace InigmaITEmployment.HTML
         {
 
         }
+
+        protected void btnCancelDelete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("JobSearch.aspx");
+        }
     }
 }

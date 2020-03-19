@@ -47,8 +47,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsJobCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstJob.cs" />
   </ItemGroup>

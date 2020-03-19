@@ -13,5 +13,15 @@ namespace InigmaITEmployment.HTML
         {
 
         }
+
+        protected void txtApply_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Application.aspx");
+        }
+
+        protected void btnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("JobSearch.aspx");
+        }
     }
 }
