@@ -2,5 +2,8 @@
 {
     internal class ThisJob
     {
+        internal class Job
+        {
+        }
     }
 }

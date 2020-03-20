@@ -22,40 +22,49 @@ namespace InigmaITEmployment.HTML {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtJobSearch control.
+        /// lstJobBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtJobSearch;
+        protected global::System.Web.UI.WebControls.ListBox lstJobBox;
         
         /// <summary>
-        /// btnSearch control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// lstJob control.
+        /// btnSearchJob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstJob;
+        protected global::System.Web.UI.WebControls.Button btnSearchJob;
         
         /// <summary>
-        /// btnAddJob control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddJob;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// btnViewJob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnViewJob;
         
         /// <summary>
         /// btnUpdateJob control.
@@ -67,21 +76,21 @@ namespace InigmaITEmployment.HTML {
         protected global::System.Web.UI.WebControls.Button btnUpdateJob;
         
         /// <summary>
-        /// btnDeleteJob control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteJob;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// btnViewJob control.
+        /// btnHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewJob;
+        protected global::System.Web.UI.WebControls.Button btnHome;
     }
 }

@@ -17,42 +17,38 @@ namespace InigmaITEmployment.HTML
 
         void DisplayJobs()
         {
-            classLibrary.clsJobCollection Jobs = new classLibrary.clsJobCollection();
-            lstJob.DataSource = Jobs.mJobs;
-            lstJob.DataValueField = "PK_JobNo";
-            lstJob.DataTextField = "JobName";
-            lstJob.DataBind();
+           //classLibrary.clsJobCollection Jobs = new classLibrary.clsJobCollection();
+           //lstJob.DataSource = Jobs.mJobs;
+           //lstJob.DataValueField = "PK_JobNo";
+           //lstJob.DataTextField = "JobName";
+           //lstJob.DataBind();
         }
 
-        protected void btnViewJob_Click(object sender, EventArgs e)
+        protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Job.aspx");
-
-        }
-
-        protected void btnUpdateJob_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Update job.aspx");
-        }
-
-        protected void btnAddJob_Click(object sender, EventArgs e)
-        {
-            //store -1 to the session object to show this is a new record
-            Session["PK_JobNo"] = -1;
             Response.Redirect("Add Job.aspx");
         }
 
-        protected void btnDeleteJob_Click(object sender, EventArgs e)
+       
+
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Job.aspx");
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("Update Job.aspx");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
             Response.Redirect("Delete Job.aspx");
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void btnHome_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Index.html");
         }
-
-        
     }
 }

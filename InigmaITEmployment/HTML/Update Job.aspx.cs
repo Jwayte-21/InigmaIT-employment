@@ -16,7 +16,7 @@ namespace InigmaITEmployment.HTML
 
         protected void btnCancelUpdate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("JobSarch.aspx");
+            Response.Redirect("JobSearch.aspx");
         }
     }
 }

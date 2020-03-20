@@ -24,28 +24,27 @@ namespace InigmaITEmployment.HTML
 
         void Add()
         {
-            clsJobCollection JobBook = new clsJobCollection();
+            //clsJobCollection JobBook = new clsJobCollection();
             //the code below is to validate the data on the web form
-            string Error = JobBook.ThisJob.Valid(txtAddJobName.Text, txtAddJobDescription.Text, txtAddDate.Text, txtAddStaffId.Text, txtAddEmployerId.Text);
-            if (Error == "")
+            //string Error = JobBook.ThisJob.Valid(txtAddJobName.Text, txtAddJobDescription.Text, txtAddDate.Text, txtAddStaffId.Text, txtAddEmployerId.Text);
+           // if (Error == "")
             {
-                JobBook.ThisJob.Job Name = txtAddJobName.Text;
-                JobBook.ThisJob.Job Description = txtAddJobDescription.Text;
-                JobBook.ThisJob.Date posted = Convert.ToDateTime(txtAddDate.Text);
-                JobBook.ThisJob.Staff ID = Convert.ToInt32(txtAddStaffId.Text);
-                JobBook.ThisJob.Employer id = Convert.ToInt32(txtAddEmployerId);
-                JobBook.Add();
+               // JobBook.ThisJob.Job Name = txtAddJobName.Text;
+               //JobBook.ThisJob.Job Description = txtAddJobDescription.Text;
+               //JobBook.ThisJob.Date posted = Convert.ToDateTime(txtAddDate.Text);
+               // JobBook.ThisJob.Staff ID = Convert.ToInt32(txtAddStaffId.Text);
+               // JobBook.ThisJob.Employer id = Convert.ToInt32(txtAddEmployerId);
+               // JobBook.Add();
             }
-            else
+            //else
             {
-                lblAddError.Text = "There were problems with the data you entered" + Error;
+               // lblAddError.Text = "There were problems with the data you entered" + Error;
             }
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Add();
-            Response.Redirect("JobSearch.aspx");
+            //Add();
         }
     }
 }
